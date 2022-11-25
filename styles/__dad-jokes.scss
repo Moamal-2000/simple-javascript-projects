@@ -1,0 +1,78 @@
+.jokes-container {
+  background-color: #fff;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  width: 700px;
+  margin: 0 auto;
+}
+
+@media (max-width: 992px) {
+  .jokes-container {
+    width: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .jokes-container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 475px) {
+  .jokes-container {
+    gap: 0;
+    padding: 20px;
+  }
+}
+
+.jokes-container h3 {
+  color: #808080;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.jokes-container .joke-content {
+  font-size: 30px;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  font-weight: 400;
+  width: 80%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+}
+
+@media (max-width: 992px) {
+  .jokes-container .joke-content {
+    font-size: 24px;
+    width: 90%;
+  }
+}
+
+@media (max-width: 475px) {
+  .jokes-container .joke-content {
+    font-size: 20px;
+    line-height: 1.3;
+    margin: 0;
+    width: 100%;
+  }
+}
+
+.jokes-container .next-joke {
+  background-color: #9f68e0;
+  color: #fff;
+  border: none;
+  padding: 10px 40px;
+  box-shadow: 0 6px 10px #cdcccc;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  font-size: 17px;
+}

@@ -1,0 +1,194 @@
+$slider-radius: 10px;
+
+.slider-container {
+  width: 700px;
+  height: 350px;
+  margin: 0 auto;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .slider-container {
+    width: 90%;
+    height: 200px;
+  }
+}
+
+@media (max-width: 610px) {
+  .slider-container {
+    height: 150px;
+  }
+}
+
+.slider-container .images-holder {
+  position: relative;
+}
+
+.slider-container .images-holder img {
+  width: 100%;
+  height: 350px;
+  position: absolute;
+  object-fit: cover;
+  opacity: 0;
+  z-index: 1;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  border-radius: $slider-radius;
+  -webkit-border-radius: $slider-radius;
+  -moz-border-radius: $slider-radius;
+  -ms-border-radius: $slider-radius;
+  -o-border-radius: $slider-radius;
+}
+
+@media (max-width: 992px) and (min-width: 768px) {
+  .slider-container {
+    width: 610px;
+  }
+}
+
+@media (max-width: 768px) {
+  .slider-container .images-holder img {
+    height: 200px;
+  }
+}
+
+@media (max-width: 610px) {
+  .slider-container .images-holder img {
+    height: 150px;
+  }
+}
+
+.slider-container .images-holder img.active {
+  opacity: 1;
+}
+
+.slider-container .next-button,
+.slider-container .prev-button {
+  position: absolute;
+  z-index: 20;
+  background-color: #0000002f;
+  color: white;
+  font-size: 18px;
+  width: 80px;
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+  top: 0;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+@media (max-width: 610px) {
+
+  .slider-container .next-button,
+  .slider-container .prev-button {
+    width: 50px;
+  }
+}
+
+@media (max-width: 376px) {
+
+  .slider-container .next-button,
+  .slider-container .prev-button {
+    width: 40px;
+  }
+}
+
+.slider-container .next-button {
+  right: 0;
+  border-radius: 0 $slider-radius $slider-radius 0;
+  -webkit-border-radius: 0 $slider-radius $slider-radius 0;
+  -moz-border-radius: 0 $slider-radius $slider-radius 0;
+  -ms-border-radius: 0 $slider-radius $slider-radius 0;
+  -o-border-radius: 0 $slider-radius $slider-radius 0;
+}
+
+.slider-container .prev-button {
+  left: 0;
+  border-radius: $slider-radius 0 0 $slider-radius;
+  -webkit-border-radius: $slider-radius 0 0 $slider-radius;
+  -moz-border-radius: $slider-radius 0 0 $slider-radius;
+  -ms-border-radius: $slider-radius 0 0 $slider-radius;
+  -o-border-radius: $slider-radius 0 0 $slider-radius;
+}
+
+.slider-container .next-button:not(.disabled):hover,
+.slider-container .prev-button:not(.disabled):hover {
+  background-color: #00000051;
+}
+
+.slider-container .next-button.disabled,
+.slider-container .prev-button.disabled {
+  cursor: no-drop;
+}
+
+.slider-container .next-button i,
+.slider-container .prev-button i {
+  color: #ffffff9e;
+  font-size: 28px;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+@media (max-width: 376px) {
+
+  .slider-container .next-button i,
+  .slider-container .prev-button i {
+    font-size: 20px;
+  }
+}
+
+.slider-container .pagination {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2px;
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  width: 70%;
+}
+
+.slider-container .pagination li {
+  background-color: #0000002f;
+  color: white;
+  width: 24px;
+  height: 24px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.slider-container .pagination li:hover {
+  background-color: #2998ff30;
+}
+
+.slider-container .pagination li.active {
+  background-color: #2998ffa1;
+}

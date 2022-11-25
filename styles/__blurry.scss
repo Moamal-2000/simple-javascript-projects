@@ -1,0 +1,49 @@
+:root {
+  --blur-degree: 15px;
+}
+
+.blurry-loading {
+  background-image:
+    url('../images/blurry-img.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: -350px;
+  width: 100%;
+  height: 90vh;
+  filter: blur(var(--blur-degree));
+  -webkit-filter: blur(var(--blur-degree));
+  position: relative;
+  transition: filter 4s;
+  -webkit-transition: filter 4s;
+  -moz-transition: filter 4s;
+  -ms-transition: filter 4s;
+  -o-transition: filter 4s;
+}
+
+@media (max-width: 1200px) {
+  .blurry-loading {
+    background-position-y: -150px;
+  }
+}
+
+@media (max-width: 992px) {
+  .blurry-loading {
+    background-position-y: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .blurry-loading {
+    background-position-y: -20px;
+    height: 400px;
+  }
+}
+
+.blurry-loading::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}

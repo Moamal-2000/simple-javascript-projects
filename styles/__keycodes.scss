@@ -1,0 +1,30 @@
+.keycodes-container {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.keycodes-container .press-key-msg,
+.keycodes-container .key-event {
+  background-color: #fff;
+  color: #000;
+  font-size: 22px;
+  padding: 15px;
+  border: solid 1px #ababab;
+}
+
+.keycodes-container .key-event {
+  width: 160px;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+}
+
+@media (max-width: 376px) {
+  .keycodes-container .key-event {
+    font-size: 16px;
+    width: 150px;
+  }
+}

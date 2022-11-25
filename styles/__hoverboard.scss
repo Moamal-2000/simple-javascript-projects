@@ -1,0 +1,70 @@
+.hoverboard-container {
+  width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  background-color: black;
+  padding: 40px;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .hoverboard-container {
+    width: 400px;
+  }
+}
+
+@media (max-width: 580px) {
+  .hoverboard-container {
+    width: 260px;
+    padding: 20px;
+  }
+}
+
+
+.hoverboard-container .box {
+  width: 20px;
+  height: 20px;
+  background-color: #1d1d1d;
+  box-shadow: 0 0 10px #171717;
+}
+
+.hoverboard-container.style .box {
+  width: 100%;
+}
+
+.hoverboard-container .hoverboard-style {
+  background-color: #3b85fd;
+  color: #fff;
+  position: absolute;
+  left: -120px;
+  top: 0;
+  padding: 5px 15px;
+  border: none;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+  .hoverboard-container .hoverboard-style {
+    left: calc(50% - 50px);
+    top: -44px;
+  }
+}
+
+.hoverboard-container .hoverboard-style:hover {
+  background-color: #156fff;
+}

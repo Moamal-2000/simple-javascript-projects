@@ -1,0 +1,117 @@
+.project .form1 {
+  background-color: #2a4e6c;
+  color: #fff;
+  padding: 40px;
+  width: 370px;
+  margin: 0 auto;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+@media (width < 500px) {
+  .project .form1 {
+    width: 100%;
+  }
+}
+
+.project .form1 h2 {
+  width: fit-content;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+}
+
+.project .form1 .inputs-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.project .form1 .inputs-container .input {
+  position: relative;
+  width: 100%;
+}
+
+.project .form1 .inputs-container .input label {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  font-size: 20px;
+}
+
+.project .form1 .inputs-container .input label .animated-letter {
+  display: inline-block;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+$letters-delay: 0.1;
+
+@for $i from 1 through 5 {
+  .project .form1 .inputs-container .input label:nth-child(1) .animated-letter:nth-child(#{$i}) {
+    transition-delay: $letters-delay + s;
+  }
+
+  $letters-delay: $letters-delay + 0.1;
+}
+
+$letters-delay: 0.1;
+
+@for $i from 1 through 8 {
+  .project .form1 .inputs-container .input label:nth-child(2) .animated-letter:nth-child(#{$i}) {
+    transition-delay: $letters-delay + s;
+  }
+
+  $letters-delay: $letters-delay + 0.1;
+}
+
+.project .form1 .inputs-container .input input {
+  background-color: inherit;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #fff;
+  padding: 10px 0;
+  font-size: 20px;
+  width: 100%;
+  color: #fff;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.project .form1 .inputs-container .input input:focus {
+  border-color: #add8e6;
+}
+
+.project .form1 .submit-button {
+  width: 100%;
+  margin: 30px auto;
+  margin-top: 40px;
+  background-color: #add8e6;
+  color: #252525;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.project .form1 p {
+  margin-bottom: 0;
+}
+
+.project .form1 p a {
+  text-decoration: none;
+  color: #add8e6;
+}
