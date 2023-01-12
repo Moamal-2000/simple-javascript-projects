@@ -29,19 +29,11 @@ else if (innerWidth <= 580) numberOfBoxes = 125;
   }
 })();
 
-let hoverboardStyleSwitcher = false;
 hoverboardStyleButton.addEventListener("click", () => {
   const boxes = document.querySelectorAll(".hoverboard-container .box");
 
   boxes.forEach((box) => {
-    if (!hoverboardStyleSwitcher) {
-      box.style.transition = "0s";
-      hoverboardContainer.classList.add("style");
-      hoverboardStyleSwitcher = !hoverboardStyleSwitcher;
-    } else {
-      box.style.transition = "0s";
-      hoverboardContainer.classList.remove("style");
-      hoverboardStyleSwitcher = !hoverboardStyleSwitcher;
-    }
+    box.style.transition = "0s";
+    hoverboardContainer.classList.toggle("style");
   });
 });

@@ -21,19 +21,33 @@ let jokes = [
   "Last night me and my girlfriend watched three DVDs back to back. Luckily I was the one facing the TV.",
   "What did the Zen Buddist say to the hotdog vendor? Make me one with everything.",
 ];
-let currentJoke = 0;
 
-const addNextJoke = () => {
-  currentJoke++;
-  if (currentJoke < jokes.length) jokeElement.textContent = jokes[currentJoke];
-  else jokeElement.textContent = "Enough jokes for today";
+function getRandomJoke(jokes) {
+  let randomIndex = Math.floor(Math.random() * jokes.length);
+  let randomJoke = jokes[randomIndex];
 
-  // Button effect
+  if (jokes.length === 1) {
+    jokeElement.textContent = "Enough Jokes For Today.";
+    return false;
+  }
+  // Show the joke
+  jokeElement.textContent = randomJoke;
+  // remove the joke from the array so it won't be repeated
+  jokes.splice(randomIndex, 1);
+}
+
+function buttonEffect() {
   nextJoke.style.transform = "scale(0.992)";
   setTimeout(() => (nextJoke.style.transform = "scale(1)"), 200);
+}
+
+const addNextJoke = () => {
+  getRandomJoke(jokes);
+  buttonEffect();
 };
 
 nextJoke.addEventListener("click", () => addNextJoke());
 
-// Show First Joke
-jokeElement.textContent = jokes[currentJoke];
+// Show First Joke and remove it from jokes list
+jokeElement.textContent = jokes[0];
+jokes.slice(0,1)

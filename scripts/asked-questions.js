@@ -16,7 +16,7 @@ closeAnswerButtons.forEach((button) => (button.style.display = "none"));
 
 let questionButtonsSwitchers = [];
 
-questionBoxes.forEach((box) => questionButtonsSwitchers.push(false));
+questionBoxes.forEach(() => questionButtonsSwitchers.push(false));
 
 for (let i = 0; i < showAnswerButtons.length; i++) {
   showAnswerButtons[i].addEventListener("click", () => {

@@ -1,6 +1,6 @@
-const blurryImg = document.querySelector(".blurry-loading");
+const blurryImg = document.querySelector(".blurry-loading"),
+  blurryTimerEle = document.createElement("span");
 
-const blurryTimerEle = document.createElement("span");
 blurryTimerEle.appendChild(document.createTextNode("0%"));
 blurryImg.appendChild(blurryTimerEle);
 blurryTimerEle.style.cssText = `
